@@ -20,5 +20,13 @@ Boolean bool = Boolean.valueOf(false);
             System.out.println("false");
 		
         }
+//		修正後
+        String bool1 = "ABC";
+        String bool2 = "DEF";
+        if (bool1.equals(bool2)) {
+        	System.out.println("true");
+        } else {
+        	System.out.println("false");
+        }
 	}
 }
