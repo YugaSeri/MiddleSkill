@@ -14,9 +14,9 @@ public class test1 {
 		
 		if (x < 0 && y < 0 && z < 0) {
 			System.out.println("正の整数：NG");
-		}else if (x != 1*10) {
+		}if (x != 1*10) {
 			System.out.println("10の倍数：NG");
-		}else if (x + y + z == 100) {
+		}if (x + y + z == 100) {
 			System.out.println("プラス100：OK");}
 		else {	System.out.println("プラス100：NG");
 		}
