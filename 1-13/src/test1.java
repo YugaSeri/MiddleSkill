@@ -34,10 +34,8 @@ public class test1 {
 		            for (String s3 : strArray3) {
 		                if (s3.equals(String.valueOf(target.charAt(targetIndex)))) {
 		                    strArray4.add(s3);
-		                    System.out.print(s3);
 		                    targetIndex++;
 		                    if (targetIndex < target.length()) {
-		                        System.out.print(",");
 		                    }
 		                    break;  // 次の目的の文字に進む
 		                }
@@ -51,5 +49,6 @@ public class test1 {
 		        break;
 		    }
 		}
+		System.out.print(strArray4);
 	}
 }
