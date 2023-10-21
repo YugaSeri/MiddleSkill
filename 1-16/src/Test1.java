@@ -25,7 +25,6 @@ public class Test1 {
 		//問題5:Personインスタンス：「sato」の年齢を変更しようとして「無効な年齢です１」と出力させてください。
 		//改行
 		sato.setAge(-1);
-		sato.inform2();
 		System.out.println("問６");
 		//問題6:Personインスタンス：「sato」の性別を「男性」→「女性」に変更して性別を出力してください。
 		sato.setGender("女性");
