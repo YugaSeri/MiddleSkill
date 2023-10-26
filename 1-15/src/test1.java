@@ -15,9 +15,8 @@ public class test1 {
 		
 		System.out.println("問３");
 		//問3のメソッドを呼び出して出力してください（引数,配列[5,3,1,9,4,8]）
-		Integer [] i = {5,3,1,9,4,8};
-		Arrays.sort(i, Collections.reverseOrder());
-		System.out.println(Arrays.toString(i));
+		Integer [] j = {5,3,1,9,4,8};
+		sort(j);
 		//改行
 		System.out.println("問４");
 		//問4のメソッドを呼び出して出力してください（引数,配列[5,3,1,9,4,8]）
@@ -39,7 +38,12 @@ public class test1 {
 		return true;
 	}
 	//問題3:整数の配列を受け取り、その配列の要素を降順にソートするメソッドを作成してください。(for文は利用しないこと)
-	
+	public static Integer[] sort (Integer [] j) {
+		
+		Arrays.sort(j, Collections.reverseOrder());
+		System.out.println(Arrays.toString(j));
+		return j;
+	}
 
 	//問題4:整数の配列を受け取り、その配列の中で最小値を持つ要素のインデックスを返すメソッドを作成してください。
 	public static int calcMin(int[] k) {
