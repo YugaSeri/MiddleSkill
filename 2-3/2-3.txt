@@ -1,0 +1,104 @@
+﻿⚫️課題2−3
+
+
+エビデンス写真を格納してからプッシュしてください。
+例）エビデンス問①
+
+
+①下記テーブルのDMLとDDLの提出及びテーブルスクショをエビデンスとして残すこと
+
+
+DDL回答
+「 CREATE TABLE customers
+   (customers_id int PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255),
+    phone VARCHAR(255)
+    );
+    COMMENT ON COLUMN customers.customers_id IS '顧客ID'；
+　　COMMENT ON COLUMN customers.name IS '顧客名'；
+    COMMENT ON COLUMN customers.email IS 'メールアドレス'；
+　　COMMENT ON COLUMN customers.phone IS '電話番号'；
+　　COMMENT ON TABLE　customers　IS '顧客情報';
+
+    CREATE TABLE product
+    (products_id int PRIMARY KEY,
+     name VARCHAR(255),
+     price DECIMAL(10,2);
+     cotegory VARCHAR(255)
+     );
+    COMMENT ON COLUMN product.products_id IS '製品ID'；
+　　COMMENT ON COLUMN product.name IS '製品名'；
+    COMMENT ON COLUMN product.price IS '価格'；
+　　COMMENT ON COLUMN product.cotegory IS 'カテゴリ'；
+　　COMMENT ON TABLE　product　IS '製品情報';
+
+     CREATE TABLE orders
+     (oder_id int PRIMARY KEY,
+      customer_id int,
+      order_date DATE,
+      total DECIMAL(10,2),
+      FOREIGN KEY(customer_id)
+	REFERENCES customers(customer_id)
+      );
+    COMMENT ON COLUMN orders.oder_id IS '注文ID'；
+　　COMMENT ON COLUMN orders.customer_id IS '顧客ID'；
+    COMMENT ON COLUMN orders.order_date IS '注文日'；
+　　COMMENT ON COLUMN orders.order_date IS '合計金額'；
+　　COMMENT ON TABLE　orders　IS '注文情報';
+     
+      CREATE TABLE order_item
+     (oder_id int PRIMARY KEY,
+      products_id int PRIMARY KEY,
+      quanity int,
+      price DECIMAL(10,2),
+      FOREIGN KEY(oder_id)
+	REFERENCES orders(oder_id),
+      FOREIGN KEY(products_id)
+	REFERENCES product(products_id)
+      );
+    COMMENT ON COLUMN order_item.oder_id IS '注文ID'；
+　　COMMENT ON COLUMN order_item.customer_id IS '製品ID'；
+    COMMENT ON COLUMN order_item.order_date IS '数量'；
+　　COMMENT ON COLUMN order_item.order_date IS '価格'；
+　　COMMENT ON TABLE　order_item　IS '注文アイテム';　　　」
+DML回答
+「INSERT INTO customers
+  (customers_id, name, email, phone)
+  VALUES
+  ('1', '山田太郎', 'yamada@exsanple.com', '012-3456-7890'),
+  ('2', '田中花子', 'tabaka@exsanple.com', '090-1234-5678'),
+  ('3', '鈴木次郎', 'suzuki@exsanple.com', '080-8765-4321');
+
+  INSERT INTO product
+  (products_id, name, price, cotegory)
+  VALUES
+  (1, 'iPhone12', 80000.00, 'スマートフォン'),
+  (2, 'iPad Pro', 120000.00, 'タブレット'),
+　(3, 'MacBook Pro', 200000.00, 'パソコン'),
+　(4, 'エアコン', 50000.00, '家電'),
+　(5, 'テレビ', 100000.00, '家電');
+
+  INSERT INTO orders
+  (oder_id, customer_id, order_date, total)
+  VALUES
+  (1, '1', 2022/1/1, 160000.00),
+  (2, '1', 2022/2/1, 240000.00),
+  (3, '2', 2022/3/1, 120000.00),
+  (4, '3', 2022/4/1, 100000.00);
+
+  INSERT INTO order_item
+  (oder_id, products_id, quanity, price)
+  VALUES
+  (1, 1, 2, 80000.00),
+  (2, 3, 1, 200000.00),
+  (2, 4, 1, 50000.00),
+  (2, 5, 2, 200000.00),
+  (3, 2, 1, 120000.00),
+  (4, 4, 2, 100000.00),」
+
+
+誤っているため下記の認識でお願いいたします！！
+※顧製品情報 → 製品情報
+※製品情報（顧客名） → 製品名
+
