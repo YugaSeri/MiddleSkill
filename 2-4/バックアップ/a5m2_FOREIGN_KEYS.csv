@@ -1,0 +1,4 @@
+CONSTRAINT_CATALOG,CONSTRAINT_SCHEMA,CONSTRAINT_NAME,TABLE_SCHEMA,TABLE_NAME,COLUMNS,CARDINARITY,REFERENCED_TABLE_SCHEMA,REFERENCED_TABLE_NAME,REFERENCED_COLUMNS,REFERENCED_CARDINARITY,CAPTION
+localhost/testdb,,order_item_oder_id_fkey,public,order_item,oder_id,,public,orders,oder_id,,
+localhost/testdb,,order_item_products_id_fkey,public,order_item,products_id,,public,product,products_id,,
+localhost/testdb,,orders_customers_id_fkey,public,orders,customers_id,,public,customers,customers_id,,

@@ -1,0 +1,5 @@
+TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,LOGICAL_NAME,TABLE_TYPE,DESCRIPTION,TAG
+localhost/testdb,public,customers,顧客情報,BASE TABLE,,
+localhost/testdb,public,order_item,注文アイテム,BASE TABLE,,
+localhost/testdb,public,orders,注文情報,BASE TABLE,,
+localhost/testdb,public,product,製品情報,BASE TABLE,,

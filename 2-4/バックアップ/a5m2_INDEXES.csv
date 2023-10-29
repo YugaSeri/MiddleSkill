@@ -1,0 +1,4 @@
+TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,INDEX_NAME,COLUMNS,IS_PRIMARY_KEY,UNIQUE,CREATE_OPTION
+localhost/testdb,public,customers,customers_pkey,customers_id,YES,YES,
+localhost/testdb,public,orders,orders_pkey,oder_id,YES,YES,
+localhost/testdb,public,product,product_pkey,products_id,YES,YES,

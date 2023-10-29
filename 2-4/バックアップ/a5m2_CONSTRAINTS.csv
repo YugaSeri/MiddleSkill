@@ -1,0 +1,7 @@
+TABLE_CATALOG,TABLE_SCHEMA,TABLE_NAME,CONSTRAINT_NAME,CONSTRAINT_TYPE,CONSTRAINT_CONTENTS
+localhost/testdb,public,customers,2200_24740_1_not_null,CHECK,customers_id IS NOT NULL
+localhost/testdb,public,customers,customers_pkey,PRIMARY KEY,customers_id
+localhost/testdb,public,orders,2200_24774_1_not_null,CHECK,oder_id IS NOT NULL
+localhost/testdb,public,orders,orders_pkey,PRIMARY KEY,oder_id
+localhost/testdb,public,product,2200_24747_1_not_null,CHECK,products_id IS NOT NULL
+localhost/testdb,public,product,product_pkey,PRIMARY KEY,products_id
