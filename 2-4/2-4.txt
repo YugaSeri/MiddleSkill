@@ -28,9 +28,7 @@
 
 
 ④注文アイテムテーブルから、エアコン を購入した注文数を取得し注文された合計金額を取得するSQL文 ※LEFT JOINを利用すること
-「SELECT OI.oder_id, O.total FROM orders AS O LEFT JOIN order_item AS OI ON OI.oder_id = O.oder_id  WHERE O.oder_id = 4;」
-
-  
+「SELECT OI.oder_id, O.total FROM orders AS O LEFT JOIN order_item AS OI ON OI.oder_id = O.oder_id  WHERE GROUP BY OI.products_id = 4;」
 
 
 
