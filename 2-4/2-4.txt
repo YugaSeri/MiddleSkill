@@ -28,7 +28,7 @@
 
 
 ④注文アイテムテーブルから、エアコン を購入した注文数を取得し注文された合計金額を取得するSQL文 ※LEFT JOINを利用すること
-「SELECT OI.oder_id, O.total FROM orders AS O LEFT JOIN order_item AS OI ON OI.oder_id = O.oder_id  WHERE GROUP BY OI.products_id = 4;」
+「SELECT SUM(order_item.price) FROM orders LEFT JOIN order_item ON order_item.oder_id = orders.oder_id WHERE products_id = 4;」
 
 
 
@@ -48,4 +48,13 @@
 
 
 ⑦注文情報テーブルから、各顧客が最も最近に注文した日付を取得するSQL文
-「SELECT MAX(order_date),customers_id FROM orders GROUP BY customers_id;」
+select 
+T1.customers_id,newdate
+
+from orders as T1
+
+inner join  (select customers_id, MAX(order_date) as newdate from orders group by customers_id) as T2
+
+ON T1.customers_id = T2.customers_id
+
+where T1.order_date = T2.newdate
