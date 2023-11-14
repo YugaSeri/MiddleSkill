@@ -49,9 +49,13 @@
 
 ⑦注文情報テーブルから、各顧客が最も最近に注文した日付を取得するSQL文
 select 
-T1.customers_id,newdate
+customers.name,T1.customers_id,newdate
 
-from orders as T1
+from customers
+
+inner join orders as T1
+
+ON customers.customers_id = T1.customers_id
 
 inner join  (select customers_id, MAX(order_date) as newdate from orders group by customers_id) as T2
 
