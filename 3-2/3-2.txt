@@ -4,9 +4,9 @@
 
 
 ②Modelの役割は何になるか3つ記載しなさい。（コピペ禁止で手で入力すること）
-データベースとの接続
-データの編集
-データを求めている形に加工する
+データベースとデータのやり取りを処理する
+システム内部のデータ処理
+データベースへの保存
 
 
 
@@ -34,7 +34,7 @@ M（Model）
 
 
 
-「view」→「controller」→「sevice」→「controller」→「dao」→「DB」
+「view」→「controller」→「Entity」→「controller」→「dao」→「DB」
 →「dao」→「form」→「Entity」→「DB」→「Entity」→「daoimpl」
 →「Entity」→「serviceimpl」→「Entity」→「controller」→「sevice」→「controller」
 →「view」
